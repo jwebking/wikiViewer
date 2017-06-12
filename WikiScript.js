@@ -1,4 +1,7 @@
-(function () {
+$(document).ready(function () {
+
+
+
 
   $(".random").on("click", function () {
     var url = "https://en.wikipedia.org/wiki/Special:Random"
@@ -29,7 +32,7 @@
     $.ajax({
       url: 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=' + userInput + '&callback=?',
       type: 'GET',
-      dataType: 'jsonp',
+      data: "jsonp",
       success: function (data) {
 
         if (data.query.searchinfo.totalhits == 0) {
@@ -47,7 +50,11 @@
             $('.searchResults').append("<div class=\"wikiInfo\"><h4 class=\"wikiTitle\"><a href= 'https://en.wikipedia.org/wiki/" + titleResults + "'target=\"_blank\">" + titleResults + "</a></h4> <p class=\"wikiSnip\">" + snippetResults + "..." + "</p></div>");
           };
         }
+      },
+      error: function () {
+        console.log("not working buddy");
       }
     });
-  })
+  });
+
 });
