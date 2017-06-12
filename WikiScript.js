@@ -16,7 +16,7 @@ $(document).ready(function () {
   });
 
   $("#userInput").on("click", function () {
-    this.css("border-color", "#2C2C2C");
+    $(this).css("border-color", "#2C2C2C");
   })
 
   $("#search").on('click', function () {
