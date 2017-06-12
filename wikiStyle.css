@@ -3,6 +3,13 @@
 @font-face{
   font-family: VT323;
   src: url(https://fonts.googleapis.com/css?family=VT323);
+  font-style: normal;
+}
+
+body {
+  background-color:#007A71;
+  height: 100%;
+  width: 100%;
 }
 
 #userInput {
@@ -21,7 +28,7 @@
     font-size: 20px;
     font-family: VT323, serif;
     margin-top: 12px;
-    background: white;
+    background-color: white;
     text-align: center;
 }
 .clearSearch {
@@ -77,10 +84,6 @@ a:hover {
   font-size: 30px;
 }
 
-body {
-  background:#007A71;
-  height: 100%;
-}
 
 .blinking-cursor {
   font-weight: 100;
